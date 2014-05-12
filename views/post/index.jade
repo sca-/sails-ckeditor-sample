@@ -1,0 +1,16 @@
+extends ../layout.jade
+
+block body
+  h4 Posts
+  a.btn.btn-success(href='/post/new') Create new post
+  table.table.table-striped
+    tr
+      th title
+      th manage
+    each post in posts
+      tr
+        td= post.title
+        td.btn-group
+          a.btn.btn-default(href='/post/show/'+post.id) Show
+          a.btn.btn-warning(href='/post/edit/'+post.id) Edit
+          a.btn.btn-danger(href='/post/destroy/'+post.id) Delete

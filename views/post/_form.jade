@@ -1,0 +1,14 @@
+if (typeof(post) == 'undefined')
+  - post = { title: '', text: '' }
+
+.form-group
+  label(for='title') Post title
+  input.form-control(type='text', name='title', value=post.title)
+.form-group
+  label(for='text') Post body
+  textarea.form-control(name='text', id='ck')= post.text
+.form-group
+  input.btn.btn-success(type='submit', value='Save')
+script.
+  CKEDITOR.replace( 'ck' );
+a.btn.btn-default(href='/post') back

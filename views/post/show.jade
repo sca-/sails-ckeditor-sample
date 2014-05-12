@@ -1,0 +1,7 @@
+extends ../layout
+
+block body
+  h5= post.title
+  p!= post.text
+  hr
+  a.btn.btn-default(href='/post') back

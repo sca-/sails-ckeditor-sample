@@ -1,0 +1,6 @@
+extends ../layout
+
+block body
+  h4 New post
+  form(action="/post/create",  method="post", enctype="multipart/form-data")
+    include _form
